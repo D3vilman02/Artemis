@@ -1,4 +1,4 @@
-#include "corne.dtsi"
+#include "Artemis.dtsi"
 
 &kscan0 {
     col-gpios
