@@ -12,3 +12,5 @@ if SHIELD_ARTEMIS_LEFT || SHIELD_ARTEMIS_RIGHT
 
 config ZMK_SPLIT
     default y
+
+endif
