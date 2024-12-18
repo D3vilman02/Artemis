@@ -20,7 +20,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
          &kp Q &kp W &kp E &kp R   &kp T &kp Y  &kp U  &kp I
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L  &kp SEMI 
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K  &kp L  &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
                   &kp LGUI &kp SPACE   &kp ENTER &kp RALT
                         >;
@@ -53,4 +53,20 @@
                         >;
                 };
         };
+        combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_enter {
+            tiemout-ms = <50>;
+            key-positions = <14 15 16>;
+            bindings = <&kp RET>;
+
+        }
+            
+
+    };
 };
