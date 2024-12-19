@@ -85,7 +85,7 @@
         combo_play_pause {
             timeout-ms = <50>;
             key-positions = <5 6 7>;
-            bindings = <&kp K_VOL_DN>;
+            bindings = <&kp K_PP>;
         };
         combo_next {
             timeout-ms = <50>;
