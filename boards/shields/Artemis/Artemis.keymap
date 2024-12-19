@@ -55,22 +55,10 @@
         };
         combos {
         compatible = "zmk,combos";
-        combo_tab {
+        combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp TAB>;
         };
-        combo_enter {
-            timeout-ms = <50>;
-            key-positions = <14 15 16>;
-            bindings = <&kp RET>;
-        };
-        combo_space {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp SPACE>;
-        };
-        
-
     };
 };
