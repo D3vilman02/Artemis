@@ -4,22 +4,13 @@
 
 / {
         macros {
-        alt_tab: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT>
-                ;
-                };
         alts_tab: alt_shift_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT &kp LSHIFT>
+                = <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT &kp LSHIFT>
+                , <&macro_release &kp LSHIFT>
                 ;
                 };
         };
@@ -33,10 +24,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-              &kp Q &kp W &kp R    &kp T        &kp Y &kp U    &kp O &kp I
-        &kp E &kp A &kp S &kp D    &kp G        &kp H &kp I    &kp J &kp K    &kp L
-        &kp LSHIFT &kp Z &kp X &kp C    &kp V       &kp B &kp N    &kp M &kp SEMI &kp F
-                          &kp LGUI &mo 1        &mo 2 &kp RALT
+                   &kp Q &kp W &kp R    &kp T        &kp Y &kp U    &kp O &kp P
+        &kp E      &kp A &kp S &kp D    &kp G        &kp H &kp I    &kp J &kp K    &kp L
+        &kp LSHIFT &kp Z &kp X &kp C    &kp V        &kp B &kp N    &kp M &kp SEMI &kp F
+                               &kp LGUI &mo 1        &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -46,11 +37,11 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &alt_tab   &alts_tab  &kp N3   &kp N4           &kp N5   &kp N6   &kp UP   &kp N8   
-   &trans     &trans     &trans     &trans   &trans           &trans   &kp LEFT &kp DOWN &kp RIGHT &trans
-   &kp LSHFT  &trans     &trans     &trans   &trans           &trans   &trans   &trans   &trans    &trans    
-                                    &kp LGUI &trans           &trans   &kp RALT
-                        >;
+              &kp TAB   &alts_tab  &kp N3   &kp N4           &kp N5   &kp N6   &kp UP    &kp N8   
+   &kp RALT   &kp LSHIFT    &kp LGUI     &trans   &trans           &trans   &kp LEFT &kp DOWN  &kp RIGHT &trans
+   &kp N1  &kp N2     &kp N3     &kp N4   &kp N5           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0   
+                                   &kp LGUI &trans           &trans   &kp RALT
+                        >
                 };
 
  
@@ -66,22 +57,46 @@
             key-positions = <14 15 16>;
             bindings = <&kp RET>;
         };
-        combo_space {
+        combo_bcspace {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&kp SPACE>;
+            bindings = <&kp BSPC>;
         };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 2>;
             bindings = <&kp ESC>;
         };
-        combo_backspace {
+        combo_space {
             timeout-ms = <50>;
-            key-positions = <14 16>;
-            bindings = <&kp BSPC>;
+            key-positions = <14 15>;
+            bindings = <&kp SPACE>;
         };
-
+        combo_volup {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp K_VOL_UP>;
+        };
+        combo_voldown {
+            timeout-ms = <50>;
+            key-positions = <5 6>;
+            bindings = <&kp K_VOL_DN>;
+        };
+        combo_play_pause {
+            timeout-ms = <50>;
+            key-positions = <5 6 7>;
+            bindings = <&kp K_VOL_DN>;
+        };
+        combo_next {
+            timeout-ms = <50>;
+            key-positions = <5 7>;
+            bindings = <&kp K_NEXT>;
+        };
+        combo_prev {
+            timeout-ms = <50>;
+            key-positions = <4 7>;
+            bindings = <&kp K_PREV>;
+        };
     };
 };
 };
