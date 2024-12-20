@@ -13,6 +13,60 @@
                 , <&macro_release &kp LSHIFT>
                 ;
                 };
+        app_l: app_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                ;
+                };
+        app_r: app_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                ;
+                };
+        n_wspc: next_workspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp PG_UP>
+                , <&macro_release &kp LGUI>
+                ;
+                };
+        l_wspc: last_workspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp PG_DN>
+                , <&macro_release &kp LGUI>
+                ;
+                };
+        app_lw: app_lworkspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LSHIFT>
+                , <&macro_tap &kp PG_DN>
+                , <&macro_release &kp LGUI &kp LSHIFT>
+                ;
+                };
+        app_rw: app_rworkspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LSHIFT>
+                , <&macro_tap &kp PG_UP>
+                , <&macro_release &kp LGUI &kp LSHIFT>
+                ;
+                };        
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -24,39 +78,51 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-                   &kp Q &kp W &kp R    &kp T        &kp Y &kp U    &kp O &kp P
-        &kp E      &kp A &kp S &kp D    &kp G        &kp H &kp I    &kp J &kp K    &kp L
-        &kp LSHIFT &kp Z &kp X &kp C    &kp V        &kp B &kp N    &kp M &kp SEMI &kp F
-                               &kp LGUI &mo 1        &kp RCTRL &kp RALT
+                   &kp Q &kp E &kp R    &kp T        &kp Y     &kp U    &kp O &kp P
+        &kp W      &kp A &kp S &kp D    &kp F        &kp G     &kp H    &kp I &kp J    &kp L
+        &kp LSHIFT &kp Z &kp X &kp C    &kp V        &kp B     &kp N    &kp M &kp SEMI &kp K
+                               &kp LGUI &kp LALT     &kp LCTRL &kp RALT
                         >;
                 };
-                lower_layer {
+                nav_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp TAB    &alts_tab  &kp N3   &kp N4           &kp N5    &kp N6   &kp UP    &kp N8   
-   &kp LALT   &kp LSHIFT &kp LGUI   &trans   &trans           &kp FSLH  &kp LEFT &kp DOWN  &kp RIGHT &trans
-   &kp N1     &kp N2     &kp N3     &kp N4   &kp N5           &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   
+              &kp TAB    &alts_tab  &app_lw  &app_rw          &trans    &kp PG_DN &kp UP    &kp PG_UP  
+   &kp LALT   &app_l     &kp LGUI   &app_r   &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
+   &trans     &n_wspc    &trans     &l_wspc  &trans           &trans    &kp HOME  &trans    &kp END   &trans
                                     &kp LGUI &trans           &trans    &kp RALT
                         >;
                 };
-                other_layer {
+                nums_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp HOME    &kp END  &kp PG_UP   &kp PG_DN           &kp N5    &kp KP_N7   &kp KP_N8    &kp KP_N9   
-   &kp F1   &kp F2 &kp F3   &kp F4   &kp F5           &kp FSLH  &kp KP_N4   &kp KP_N5    &kp KP_N6   &trans
-   &kp F6     &kp F7     &kp F8     &kp F9   &kp F10           &kp N6    &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp N0   
-                                    &kp LGUI &trans           &trans    &kp RALT
+              &kp F9     &kp F10  &kp F11   &kp F12         &kp KP_MULTIPLY &kp KP_N7   &kp KP_N8    &kp KP_N9   
+   &trans     &kp F5     &kp F6   &kp F7    &kp F8          &kp KP_SLASH    &kp KP_N4   &kp KP_N5    &kp KP_N6   &kp KP_MINUS
+   &trans     &kp F1     &kp F2   &kp F3    &kp F4          &kp KP_EQUAL    &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp KP_PLUS   
+                                  &kp LGUI  &trans          &kp KP_DOT      &kp KP_N0
                         >;
                 };
-
+                symbol_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+              &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
+   &kp PRCNT  &kp CARET   &kp AMPS &kp STAR  &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
+   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &trans    &kp COMMA &kp DOT   &kp END   &trans
+                                   &kp LBRC  &kp RBRC          &kp LT    &kp GT
+                        >;
+                };
  
         combos {
         compatible = "zmk,combos";
@@ -122,8 +188,23 @@
         };
         combo_layer2 {
             timeout-ms = <50>;
-            key-positions = <19 20 21>;
+            key-positions = <10 11>;
             bindings = <&tog 2>;
+        };
+        combo_layer3 {
+            timeout-ms = <50>;
+            key-positions = <9 11>;
+            bindings = <&tog 3>;
+        };
+        combo_supr {
+            timeout-ms = <50>;
+            key-positions = <15 16 17>;
+            bindings = <&kp DEL>;
+        };
+        combo_ss {
+            timeout-ms = <50>;
+            key-positions = <13 17>;
+            bindings = <&kp PSCRN>;
         };
     };
 };
