@@ -95,10 +95,10 @@
    &kp LALT   &app_l     &kp LGUI   &app_r   &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
    &trans     &n_wspc    &trans     &l_wspc  &trans           &trans    &kp HOME  &trans    &kp END   &trans
                                     &kp LGUI &trans           &trans    &kp RALT
-                        >;
+                        >
                 };
                 nums_layer {
-// -----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -189,11 +189,16 @@
         combo_layer2 {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            bindings = <&tog 2>;
+            bindings = <&tog 1>;
         };
         combo_layer3 {
             timeout-ms = <50>;
             key-positions = <9 11>;
+            bindings = <&tog 2>;
+        };
+        combo_layer4 {
+            timeout-ms = <50>;
+            key-positions = <9 10 11>;
             bindings = <&tog 3>;
         };
         combo_supr {
