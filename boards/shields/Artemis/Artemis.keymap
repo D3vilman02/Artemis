@@ -95,7 +95,7 @@
    &kp LALT   &app_l     &kp LGUI   &app_r   &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
    &trans     &n_wspc    &trans     &l_wspc  &trans           &trans    &kp HOME  &trans    &kp END   &trans
                                     &kp LGUI &trans           &trans    &kp RALT
-                        >
+                        >;
                 };
                 nums_layer {
 // ----------------------------------------------------------------------------------------
