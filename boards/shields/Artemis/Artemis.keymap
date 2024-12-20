@@ -27,7 +27,7 @@
                    &kp Q &kp W &kp R    &kp T        &kp Y &kp U    &kp O &kp P
         &kp E      &kp A &kp S &kp D    &kp G        &kp H &kp I    &kp J &kp K    &kp L
         &kp LSHIFT &kp Z &kp X &kp C    &kp V        &kp B &kp N    &kp M &kp SEMI &kp F
-                               &kp LGUI &mo 1        &mo 2 &kp RALT
+                               &kp LGUI &mo 1        &kp RCTRL &kp RALT
                         >;
                 };
                 lower_layer {
@@ -38,8 +38,21 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
               &kp TAB    &alts_tab  &kp N3   &kp N4           &kp N5    &kp N6   &kp UP    &kp N8   
-   &kp LALT   &kp LSHIFT &kp LGUI   &trans   &trans           &kp UNDER &kp LEFT &kp DOWN  &kp RIGHT &trans
+   &kp LALT   &kp LSHIFT &kp LGUI   &trans   &trans           &kp FSLH  &kp LEFT &kp DOWN  &kp RIGHT &trans
    &kp N1     &kp N2     &kp N3     &kp N4   &kp N5           &kp N6    &kp N7   &kp N8    &kp N9    &kp N0   
+                                    &kp LGUI &trans           &trans    &kp RALT
+                        >;
+                };
+                other_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+              &kp HOME    &kp END  &kp PG_UP   &kp PG_DN           &kp N5    &kp KP_N7   &kp KP_N8    &kp KP_N9   
+   &kp F1   &kp F2 &kp F3   &kp F4   &kp F5           &kp FSLH  &kp KP_N4   &kp KP_N5    &kp KP_N6   &trans
+   &kp F6     &kp F7     &kp F8     &kp F9   &kp F10           &kp N6    &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp N0   
                                     &kp LGUI &trans           &trans    &kp RALT
                         >;
                 };
@@ -96,6 +109,21 @@
             timeout-ms = <50>;
             key-positions = <4 7>;
             bindings = <&kp K_PREV>;
+        };
+        combo_bright_up {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp C_BRI_UP>;
+        };
+        combo_bright_down {
+            timeout-ms = <50>;
+            key-positions = <1 3>;
+            bindings = <&kp C_BRI_DN>;
+        };
+        combo_layer2 {
+            timeout-ms = <50>;
+            key-positions = <19 20 21>;
+            bindings = <&tog 2>;
         };
     };
 };
