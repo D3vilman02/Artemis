@@ -80,10 +80,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-                   &kp Q &kp E &kp R    &kp T        &kp Y     &kp U    &kp O &kp P
-        &lt 4 W    &lt 4 A &lt 4 S &lt 4 D    &lt 4 F        &lt 4 G     &lt 4 H    &lt 4 I &lt 4 J    &lt 4 L
-        &kp LSHIFT &kp Z &kp X &kp C    &kp V        &kp B     &kp N    &kp M &kp SEMI &kp K
-                               &kp LGUI &kp LALT     &kp LCTRL &kp RALT
+                   &kp Q &kp E &kp R     &kp T       &kp Y       &kp U    &kp O &kp P
+        &lt 1 W    &kp A &kp S &kp D     &kp F       &kp G       &kp H    &kp I &kp J    &kp L
+        &kp LSHIFT &kp Z &kp X &kp C     &kp V       &kp B       &kp N    &kp M &kp SEMI &kp K
+                               &kp LCTRL &lt 4 LGUI  &lt 2 COMMA &lt 3 DOT
                         >;
                 };
                 nav_layer {
@@ -93,7 +93,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp TAB    &alts_tab  &app_lw  &app_rw          &trans    &kp PG_DN &kp UP    &kp PG_UP  
+              &kp TAB    &alts_tab  &app_rw  &app_lw          &trans    &kp PG_DN &kp UP    &kp PG_UP  
    &kp LALT   &app_l     &kp LGUI   &app_r   &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
    &trans     &n_wspc    &trans     &l_wspc  &trans           &trans    &kp HOME  &trans    &kp END   &trans
                                     &kp LGUI &trans           &trans    &kp RALT
@@ -121,8 +121,8 @@
                         bindings = <
               &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
    &kp PRCNT  &kp CARET   &kp AMPS &kp STAR  &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
-   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &trans    &kp COMMA &kp DOT   &kp END   &trans
-                                   &kp LBRC  &kp RBRC          &kp LT    &kp GT
+   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &kp LT    &kp COMMA &kp DOT   &kp END   &kp GT
+                                   &kp LBRC  &kp RBRC          &trans    &trans
                         >;
                 };
                 numrow_layer {
@@ -132,10 +132,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
-   &kp N1     &kp N2      &kp N3   &kp N4    &kp N5            &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &trans    &kp COMMA &kp DOT   &kp END   &trans
-                                   &kp LBRC  &kp RBRC          &kp LT    &kp GT
+              &kp KP_N7    &kp KP_N8   &kp KP_N9 &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
+   &kp N1     &kp KP_N4    &kp KP_N5   &kp KP_N6 &kp N5            &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+   &kp KP_N0  &kp KP_N1    &kp KP_N2   &kp KP_N3 &kp RBKT          &trans    &kp COMMA &kp DOT   &kp END   &trans
+                                       &kp LBRC  &kp RBRC          &kp LT    &kp GT
                         >;
                 };
                 
@@ -206,11 +206,6 @@
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&tog 1>;
-        };
-        combo_layer3 {
-            timeout-ms = <50>;
-            key-positions = <9 11>;
-            bindings = <&tog 2>;
         };
         combo_layer4 {
             timeout-ms = <50>;
