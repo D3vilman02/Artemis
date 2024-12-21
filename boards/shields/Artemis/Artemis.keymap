@@ -119,10 +119,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP
-   &kp PRCNT  &kp CARET   &kp AMPS &kp STAR  &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
-   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &kp LT    &kp COMMA &kp DOT   &kp END   &kp LSHIFT
-                                   &kp LBRC  &kp RBRC          &trans    &trans
+              &kp EQUAL   &kp EXCL &kp MINUS &kp AT            &kp PRCNT &kp FSLH  &kp UP    &kp PG_UP
+   &kp APOS   &kp STAR   &kp LPAR &kp LBKT  &kp RBKT            &kp TILDE    &kp LEFT  &kp DOWN  &kp RIGHT &kp RALT
+   &kp NUBS  &kp AMPS    &kp LBRC &kp NUHS &kp CARET          &kp TILDE2    &kp COMMA &kp DOT   &kp END   &kp LSHIFT
+                                   &kp PRCNT  &kp FSLH          &trans    &trans
                         >;
                 }; 
                 numrow_layer {
