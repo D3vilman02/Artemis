@@ -83,7 +83,7 @@
                    &kp Q &kp E &kp R     &kp T       &kp Y       &kp U    &kp O &kp P
         &lt 1 W    &kp A &kp S &kp D     &kp F       &kp G       &kp H    &kp I &kp J    &kp L
         &kp LSHIFT &kp Z &kp X &kp C     &kp V       &kp B       &kp N    &kp M &kp SEMI &kp K
-                               &kp LCTRL &lt 4 LGUI  &lt 2 COMMA &lt 3 DOT
+                               &lt 4 LGUI &kp LCTRL  &lt 2 COMMA &lt 3 DOT
                         >;
                 };
                 nav_layer {
@@ -119,12 +119,12 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
+              &kp EXCL    &kp AT   &kp HASH  &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP
    &kp PRCNT  &kp CARET   &kp AMPS &kp STAR  &trans            &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
-   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &kp LT    &kp COMMA &kp DOT   &kp END   &kp GT
+   &kp EQUAL  &kp LPAR    &kp RPAR &kp LBKT  &kp RBKT          &kp LT    &kp COMMA &kp DOT   &kp END   &kp LSHIFT
                                    &kp LBRC  &kp RBRC          &trans    &trans
                         >;
-                };
+                }; 
                 numrow_layer {
 // 4-----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -221,6 +221,16 @@
             timeout-ms = <50>;
             key-positions = <13 17>;
             bindings = <&kp PSCRN>;
+        };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <18 29>;
+            bindings = <&kp RALT>;
+        };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <18 28>;
+            bindings = <&kp LALT>;
         };
     };
 };
