@@ -119,8 +119,8 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp EQUAL   &kp EXCL &kp MINUS &kp AT            &kp PRCNT  &kp FSLH  &kp UP    &kp PG_UP
-   &kp APOS   &kp STAR    &kp LPAR &kp LBKT  &kp RBKT          &kp TILDE  &kp LEFT  &kp DOWN  &kp RIGHT &kp RALT
+              &kp EQUAL   &kp EXCL &kp MINUS &kp AT            &kp TILDE  &kp PRCNT &kp UP    &kp PG_UP
+   &kp APOS   &kp STAR    &kp LPAR &kp LBKT  &kp RBKT          &kp FSLH   &kp LEFT  &kp DOWN  &kp RIGHT &kp RALT
    &kp NUBS   &kp AMPS    &kp LBRC &kp NUHS  &kp CARET         &kp TILDE2 &kp COMMA &kp DOT   &kp END   &kp LSHIFT
                                    &kp PRCNT &kp FSLH          &trans     &trans
                         >;
@@ -148,7 +148,20 @@
                    &kp Q &kp W &kp R      &kp T       &kp Y       &kp U    &kp O &kp P
         &kp E      &kp A &kp S &kp D      &kp F       &kp G       &kp H    &kp I &kp J    &kp L
         &kp LSHIFT &kp Z &kp X &kp C      &kp V       &kp B       &kp N    &kp M &kp SEMI &kp K
-                               &kp LALT   &kp LCTRL   &kp KP_DOT  &kp KP_N0
+                               &kp LALT   &kp SPACE   &kp KP_DOT  &kp KP_N0
+                        >;
+                };
+                gaming_layer {
+// 6---------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+                   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    &kp T       &kp Y       &kp U    &kp O &kp P
+        &kp E      &bt BT_SEL 3 &bt BT_SEL 4 &kp D           &kp F       &kp G       &kp H    &kp I &kp J    &kp L
+        &bt BT_CLR &kp Z        &kp X        &kp C           &kp V       &kp B       &kp N    &kp M &kp SEMI &kp K
+                                &kp LALT     &kp SPACE       &kp KP_DOT  &kp KP_N0
                         >;
                 };
  
@@ -258,6 +271,12 @@
             key-positions = <8 17>;
             bindings = <&tog 5>;
             layers = <0 5>;
+        };
+        combo_btlayer {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&tog 6>;
+            layers = <0 6>;
         };
     };
 };
