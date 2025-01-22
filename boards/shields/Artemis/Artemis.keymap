@@ -80,40 +80,66 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-                   &kp Q &kp E &kp R      &kp T       &kp Y       &kp U    &kp O &kp P
-        &kp W      &kp A &kp S &kp D      &kp F       &kp G       &kp H    &kp I &kp J    &kp L
-        &kp LSHIFT &kp Z &kp X &kp C      &kp V       &kp B       &kp N    &kp M &kp SEMI &kp K
-                               &lt 4 LGUI &kp LCTRL   &lt 2 COMMA &lt 3 DOT
+                   &kp Q &kp E &kp R      &kp T       &kp RBKT    &kp U    &kp O &kp P
+        &kp LALT   &kp A &kp S &kp D      &tog 4      &kp LBKT    &kp H    &kp J &kp K    &mo 5
+        &kp LSHIFT &kp Z &kp X &kp C      &tog 3      &kp FSLH    &kp N    &kp M &kp SEMI &mo 4
+                               &lt 1 LGUI &kp LCTRL   &lt 2 COMMA &lt 3 DOT
                         >; 
                 };
-                nav_layer {
+                def2_layer {
 // 1-----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp TAB    &alts_tab  &app_rw  &app_lw          &trans    &kp PG_DN &kp UP    &kp PG_UP  
-   &kp LALT   &app_l     &kp LGUI   &app_r   &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
-   &trans     &n_wspc    &trans     &l_wspc  &trans           &trans    &kp HOME  &trans    &kp END   &trans
-                                    &kp LGUI &trans           &trans    &kp RALT
+                   &kp W &kp T &kp Y      &kp T       &trans       &kp Y    &kp I &kp P
+        &trans     &kp F &kp G &kp H      &kp F       &trans       &kp H    &kp J &kp L    &trans
+        &trans     &kp V &kp B &kp N      &kp V       &trans       &kp B    &kp M &kp SEMI &trans
+                               &lt 1 LGUI &kp LCTRL   &lt 2 COMMA  &lt 3 DOT
                         >;
                 };
-                nums_layer {
-// 2---------------------------------------------------------------------------------------
+                def3_layer {
+// 2-----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp F9     &kp F10  &kp F11   &kp F12         &kp KP_MULTIPLY &kp KP_N7   &kp KP_N8    &kp KP_N9   
-   &trans     &kp F5     &kp F6   &kp F7    &kp F8          &kp KP_SLASH    &kp KP_N4   &kp KP_N5    &kp KP_N6   &kp KP_MINUS
-   &trans     &kp F1     &kp F2   &kp F3    &kp F4          &kp KP_EQUAL    &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp KP_PLUS   
-                                  &kp LGUI  &trans          &kp KP_DOT      &kp KP_N0
+                   &kp W &kp T &kp Y      &kp T       &kp Y       &kp Y    &kp I &kp P
+        &trans     &kp F &kp G &kp H      &kp F       &kp G       &kp H    &kp J &kp L    &trans
+        &trans     &kp V &kp B &kp N      &kp V       &kp B       &kp B    &kp M &kp SEMI &trans
+                               &lt 1 LGUI &kp LCTRL   &lt 2 COMMA &lt 3 DOT
+                        >;
+                };
+                nav_layer {
+// 3-----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+              &kp PG_DN  &kp UP     &kp PG_UP  &app_lw          &trans    &kp PG_UP &kp UP    &kp PG_DN  
+   &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans           &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans
+   &trans     &n_wspc    &trans     &l_wspc    &trans           &trans    &kp HOME  &trans    &kp END   &trans
+                                    &kp LGUI   &trans           &trans    &kp RALT
+                        >;
+                };
+                nums_layer {
+// 4---------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+              &kp KP_N7   &kp KP_N8    &kp KP_N9    &kp LNLCK       &kp KP_MULTIPLY &kp KP_N7   &kp KP_N8    &kp KP_N9   
+   &trans     &kp KP_N4   &kp KP_N5    &kp KP_N6    &kp F8          &kp KP_SLASH    &kp KP_N4   &kp KP_N5    &kp KP_N6   &kp KP_MINUS
+   &trans     &kp KP_N1   &kp KP_N2    &kp KP_N3    &kp F4          &kp KP_EQUAL    &kp KP_N1   &kp KP_N2    &kp KP_N3   &trans   
+                                       &kp KP_N0    &trans          &kp KP_DOT      &kp KP_N0
                         >;
                 };
                 symbol_layer {
-// 3-----------------------------------------------------------------------------------------
+// 5-----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -126,20 +152,20 @@
                         >;
                 }; 
                 numrow_layer {
-// 4-----------------------------------------------------------------------------------------
+// 6-----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp KP_N7    &kp KP_N8   &kp KP_N9 &kp DLLR          &trans    &kp PG_DN &kp UP    &kp PG_UP  
-   &kp N1     &kp KP_N4    &kp KP_N5   &kp KP_N6 &kp N5            &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-   &kp KP_N0  &kp KP_N1    &kp KP_N2   &kp KP_N3 &kp RBKT          &trans    &kp COMMA &kp DOT   &kp END   &trans
-                                       &kp LBRC  &kp RBRC          &kp LT    &kp GT
+              &kp F9     &kp F10  &kp F11   &kp LNLCK       &kp KP_MULTIPLY &kp KP_N7   &kp KP_N8    &kp KP_N9   
+   &trans     &kp F5     &kp F6   &kp F7    &kp F8          &kp KP_SLASH    &kp KP_N4   &kp KP_N5    &kp KP_N6   &kp KP_MINUS
+   &trans     &kp F1     &kp F2   &kp F3    &kp F4          &kp KP_EQUAL    &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp KP_PLUS   
+                                  &kp LGUI  &trans          &kp LT    &kp GT
                         >;
                 };
                 gaming_layer {
-// 5---------------------------------------------------------------------------------------
+// 7---------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -152,7 +178,7 @@
                         >;
                 };
                 bt_layer {
-// 6---------------------------------------------------------------------------------------
+// 8---------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -167,6 +193,12 @@
  
         combos {
         compatible = "zmk,combos";
+        combo_def3 {
+            timeout-ms = <50>;
+            key-positions = <18, 29>;
+            bindings = <&mo 2>;
+            layers = <0 1>;
+        };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <0 1>;
