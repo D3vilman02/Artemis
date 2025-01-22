@@ -82,7 +82,7 @@
                         bindings = <
                    &kp Q &kp E &kp R      &kp T       &kp RBKT    &kp U    &kp O &kp P
         &kp LSHIFT &kp A &kp S &kp D      &tog 4      &kp LBKT    &kp H    &kp J &kp K    &mo 5
-        &kp LALT   &kp Z &kp X &kp C      &tog 3      &kp FSLH    &kp N    &kp M &kp SEMI &mo 4
+        &kp LCTRL  &kp Z &kp X &kp C      &tog 3      &kp FSLH    &kp N    &kp M &kp SEMI &mo 4
                                &lt 1 LGUI &kp LALT    &lt 2 COMMA &lt 3 DOT
                         >; 
                 };
