@@ -80,9 +80,9 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-                   &kp Q &kp E &kp R      &kp T       &kp RBKT    &kp U    &kp O &kp P
-        &kp LSHIFT &kp A &kp S &kp D      &tog 4      &kp LBKT    &kp H    &kp J &kp K    &mo 5
-        &kp LCTRL  &kp Z &kp X &kp C      &tog 3      &kp FSLH    &kp N    &kp M &kp SEMI &mo 4
+                   &kp E &kp R &kp T      &kp ESC     &kp RBKT    &kp Y    &kp O &kp P
+        &kp LSHIFT &kp A &kp S &kp D      &kp F2      &kp LBKT    &kp H    &kp K &kp L    &kp F4
+        &kp LCTRL  &kp Z &kp X &kp C      &kp DEL     &kp FSLH    &kp B    &kp N &kp M    &kp RALT
                                &lt 1 LGUI &kp LALT    &lt 2 COMMA &lt 3 DOT
                         >; 
                 };
@@ -93,9 +93,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                   &kp W &kp T &kp Y      &kp T       &trans       &kp Y    &kp I &kp P
-        &trans     &kp F &kp G &kp H      &kp F       &trans       &kp H    &kp J &kp L    &trans
-        &trans     &kp V &kp B &kp N      &kp V       &trans       &kp B    &kp M &kp SEMI &trans
+                   &kp Q &kp W &kp L      &trans       &trans       &kp U    &kp I    &kp P
+        &trans     &kp I &kp F &kp G      &trans       &trans       &kp H    &kp J    &kp L    &trans
+        &trans     &kp K &kp B &kp V      &trans       &trans       &kp B    &kp SEMI &kp SEMI &trans
                                &lt 1 LGUI &kp LALT    &lt 2 COMMA  &lt 3 DOT
                         >;
                 };
@@ -106,9 +106,9 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                   &kp W &kp T &kp Y      &kp T       &kp Y       &kp Y    &kp I &kp P
-        &trans     &kp F &kp G &kp H      &kp F       &kp G       &kp H    &kp J &kp L    &trans
-        &trans     &kp V &kp B &kp N      &kp V       &kp B       &kp B    &kp M &kp SEMI &trans
+                   &kp U &kp O &kp P      &kp T       &kp Y       &kp Y    &kp UP &kp P
+        &trans     &kp H &kp J &kp Y      &kp F       &kp G       &kp LEFT  &kp DOWN  &kp RIGHT    &trans
+        &trans     &kp V &kp N &kp M      &kp V       &kp B       &kp B    &kp M &kp SEMI &trans
                                &lt 1 LGUI &kp LALT    &lt 2 COMMA &lt 3 DOT
                         >;
                 };
