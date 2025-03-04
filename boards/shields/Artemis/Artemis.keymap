@@ -161,20 +161,38 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHIFT>
+                = <&macro_press &kp LSHIFT &kp LGUI>
                 , <&macro_tap &kp PG_DN>
-                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LSHIFT &kp LGUI>
                 ;
                 };
         app_up: app_rworkspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHIFT>
+                = <&macro_press &kp LSHIFT &kp LGUI>
                 , <&macro_tap &kp PG_UP>
-                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LSHIFT &kp LGUI>
                 ;
-                };        
+                };
+        wp_up: app_rworkspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp PG_UP>
+                , <&macro_release &kp LGUI>
+                ;
+                };
+        wp_up: app_rworkspace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp PG_DN>
+                , <&macro_release &kp LGUI>
+                ;
+                };                        
 
         };
         keymap {
@@ -187,10 +205,10 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
                         bindings = <
-                   &td0  &td1  &td2       &td3        &td4        &td5       &td6   &td7
-        &kp LSHIFT &td9  &td10 &td11      &td12       &kp LBKT    &td14      &td15  &td16    &td17
-        &kp LCTRL  &td19 &td20 &td21      &td22       &td23       &td24      &td25  &td26    &kp RALT
-                               &kp LGUI   &kp LALT    &lt 2 COMMA &lt 1 DOT
+                   &td0  &td1  &td2         &td3        &td4        &td5       &td6   &td7
+        &kp LSHIFT &td9  &td10 &td11        &td12       &kp LBKT    &td14      &td15  &td16    &td17
+        &kp LCTRL  &td19 &td20 &td21        &td22       &td23       &td24      &td25  &td26    &kp RALT
+                               &lt 1 LGUI   &kp LALT    &lt 2 COMMA &lt 1 DOT
                         >; 
                 };
 
@@ -201,7 +219,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-              &kp PG_UP  &kp UP     &kp PG_DN  &none          &none    &none     &kp UP    &none  
+              &wp_up     &kp UP     &wp_dn     &none          &none    &none     &kp UP    &none  
    &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &none          &none    &kp LEFT  &kp DOWN  &kp RIGHT &none
    &trans     &app_up    &none      &app_dn    &none          &none    &none     &none     &none     &none
                                     &trans     &trans         &none    &none
@@ -308,12 +326,6 @@
             timeout-ms = <50>;
             key-positions = <1 3>;
             bindings = <&kp C_BRI_DN>;
-        };
-        combo_layer1 {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&tog 1>;
-            layers = <0 1>;
         };
         combo_layer2 {
             timeout-ms = <50>;
