@@ -184,7 +184,7 @@
                 , <&macro_release &kp LGUI>
                 ;
                 };
-        wp_up: rworkspace {
+        wp_dn: rworkspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
