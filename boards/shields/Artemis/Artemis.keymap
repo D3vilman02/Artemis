@@ -186,7 +186,7 @@
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //                   | GUI | LWR |   | ENT | RSE  |
-                        bindings = 
+                        bindings = <
                    &td0  &td1  &td2       &td3        &td4        &td5       &td6   &td7
         &kp LSHIFT &td9  &td10 &td11      &td12       &kp LBKT    &td14      &td15  &td16    &td17
         &kp LCTRL  &td19 &td20 &td21      &td22       &td23       &td24      &td25  &td26    &kp RALT
