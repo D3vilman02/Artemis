@@ -223,7 +223,7 @@
                         bindings = <
                    &td0  &td1  &td2         &kp ESC       &td4        &td5       &td6   &td7
         &kp LSHIFT &td9  &td10 &td11        &kp F2        &kp LBKT    &td14      &td15  &td16    &kp CAPS
-        &kp LCTRL  &td19 &td20 &td21        &pd DEL       &td23       &td24      &td25  &td26    &kp RALT
+        &kp LCTRL  &td19 &td20 &td21        &kp DEL       &td23       &td24      &td25  &td26    &kp RALT
                                &lt 1 LGUI   &kp LALT    &lt 2 COMMA &lt 1 DOT
                         >; 
                 };
