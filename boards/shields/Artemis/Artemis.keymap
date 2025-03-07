@@ -201,7 +201,6 @@
                 , <&macro_release &kp LGUI &kp LSHIFT>
                 ;
                 }; 
-        };
         capp: clos_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -211,6 +210,7 @@
                 ;
                 }; 
         };
+        
         keymap {
                 compatible = "zmk,keymap";
 
